@@ -45,7 +45,7 @@ export default {
   },
   components: {
     LoginComponent,
-    InicioComponent
+    InicioComponent,
   }
 }
 </script>

@@ -1,9 +1,11 @@
+  
 import Vue from 'vue'
 import App from './App.vue'
 import '../node_modules/@fortawesome/fontawesome-free/css/fontawesome.css';
 import '../node_modules/@fortawesome/fontawesome-free/css/solid.css';
 import firebase  from 'firebase';
 import 'firebase/firestore';
+
 
 
 Vue.config.productionTip = false
