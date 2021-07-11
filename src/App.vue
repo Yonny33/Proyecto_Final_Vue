@@ -1,17 +1,51 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container">
+      <div class="row">
+        <inicio-component v-if='logon' v-show="logon" @salir="ingresoCorrecto" :us="states"></inicio-component>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">        
+        <login-component v-if='!logon' @ingresarCorrecto="ingreso" @ingresarValid="ingresoCorrecto"></login-component>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import firebase  from 'firebase';
+import LoginComponent from './components/login';
+import InicioComponent from './components/inicio';
 
 export default {
   name: 'App',
+  data: function(){
+    return{
+      logon: false,
+      firebase: '',
+      db:''
+    }
+  },
+  beforeMount: function(){
+    this.firebase=firebase;
+  },
+  methods: {
+    ingreso: function(){
+      this.logon = true;
+    },
+    ingresoCorrecto: function(e){//valida si esta iniciado la sesion o no.. 
+      this.logon = e.vacio
+    },
+    states: (collback)=>{
+      firebase.auth().onAuthStateChanged((user)=>{
+        collback(user)
+      })
+    }
+  },
   components: {
-    HelloWorld
+    LoginComponent,
+    InicioComponent
   }
 }
 </script>
