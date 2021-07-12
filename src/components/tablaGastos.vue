@@ -95,7 +95,7 @@ export default {
             if(e.target.id === "todo"){
                 this.ordernarPor = ""
             }else{
-                 this.ordernarPor = e.target.id;
+                this.ordernarPor = e.target.id;
             }
             this.listarDatos();       
         },

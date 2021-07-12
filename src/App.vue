@@ -21,10 +21,15 @@ import InicioComponent from './components/inicio';
 export default {
   name: 'App',
   data: function(){
-    return{
-      logon: false,
-      firebase: '',
-      db:''
+return {Gasto : [],
+    nombreGasto:'',
+    montoGasto:'',
+    tipoGasto:'',
+    coleccion:{},
+    logon: false,
+    firebase:'',
+    idUsuario:'',
+    db:''
     }
   },
   beforeMount: function(){
