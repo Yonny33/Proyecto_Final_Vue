@@ -28,6 +28,7 @@
 <script>
 import firebase from "firebase";
 
+
 export default {
     name:'gastos-component',
     props:['btnresta'],
