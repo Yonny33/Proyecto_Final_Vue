@@ -27,7 +27,7 @@
             </div>
             <div class="table-responsive-md col-sm-12 col-md-12 col-lg-12">
                 <table class="table">
-                    <thead class="bg-primary text-white">
+                    <thead class="bg-dark text-white">
                         <tr>
                             <th scope="col">Nombre del gasto</th>
                             <th scope="col">Monto del gasto</th>
@@ -67,10 +67,13 @@ export default {
     props: ["gastosTabla", "deleteTable"],
     data: function(){
         return{
+            nombreGasto:'',
+            montoGasto:'',
+            tipoGasto:'',
             ordernarPor: '',
             btnresta: false,
             btnName: 'nuevo',
-            btnColor: 'success',
+            btnColor: 'Success',
             btnIcon: 'fas fa-plus',
             modalVue: ''
         }
@@ -123,12 +126,12 @@ export default {
         agregar_cancelar: function(e){
             if(e.target.name=="nuevo"){
                 this.btnName = "cancelar";
-                this.btnColor = "secondary";
+                this.btnColor = "sSuccess";
                 this.btnIcon = "fas fa-window-minimize";
                 this.btnresta = true;
             }else{
                 this.btnName = "nuevo";
-                this.btnColor = "success";
+                this.btnColor = "Success";
                 this.btnIcon = "fas fa-plus";
                 this.btnresta = false;
             }

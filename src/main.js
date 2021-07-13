@@ -9,18 +9,18 @@ import 'firebase/firestore';
 
 Vue.config.productionTip = false
   var firebaseConfig = {
-    apiKey: "AIzaSyCidD8yZ29n82mRv5rf1tbXmjLyYJLCLjo",
-    authDomain: "vue-gastos.firebaseapp.com",
-    databaseURL: "https://vue-gastos.firebaseio.com",
-    projectId: "vue-gastos",
-    storageBucket: "vue-gastos.appspot.com",
-    messagingSenderId: "265708791912",
-    appId: "1:265708791912:web:7a434f510cbb27520833dd",
-    measurementId: "G-YP8M2DSP1G"
+    apiKey: "AIzaSyCZrXdNWiLMc6p-TZhhZT5cWHwRM016C60",
+    authDomain: "vue-1221.firebaseapp.com",
+    projectId: "vue-1221",
+    storageBucket: "vue-1221.appspot.com",
+    messagingSenderId: "55163287943",
+    appId: "1:55163287943:web:6f701ed588363f721cbb22",
+    measurementId: "G-CDFV404ZSV"
   };
   firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-
+    const db = firebase.firestore();
+    const settings = {timestampsInSnapshots: true};
+    db.settings(settings);
 new Vue({
   render: h => h(App),
 }).$mount('#app')

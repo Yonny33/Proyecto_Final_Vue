@@ -15,6 +15,7 @@
 
 <script>
 import firebase  from 'firebase';
+import 'firebase/firestore'
 import LoginComponent from './components/login';
 import InicioComponent from './components/inicio';
 
