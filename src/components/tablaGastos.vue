@@ -59,6 +59,7 @@
 </template>
 
 <script>
+import 'firebase/firestore'
 import GastosComponent from "./Gastos";
 import EditarComponent from './Edit';
 
@@ -98,7 +99,7 @@ export default {
             if(e.target.id === "todo"){
                 this.ordernarPor = ""
             }else{
-                 this.ordernarPor = e.target.id;
+                this.ordernarPor = e.target.id;
             }
             this.listarDatos();       
         },
