@@ -35,19 +35,19 @@
                             <th scope="col" colspan="2">Acción</th>
                         </tr>
                     </thead>
-                    <tbody v-for="(shows, index) in listarDatos()" :key="index">
+                    <tbody v-for="(Gasto, index) in listarDatos()" :key="index">
                         <tr>
-                            <td class="item">{{shows.name}}</td>
-                            <td>{{shows.monto}}</td>
-                            <td>{{shows.tipo}}</td>
-                            <td v-if="modalVue!=shows.id">
-                                <button class="btn btn-info" @click="editA(shows)"><i class="fas fa-pencil-alt"></i></button>
+                            <td class="item">{{Gasto.name}}</td>
+                            <td>{{Gasto.monto}}</td>
+                            <td>{{Gasto.tipo}}</td>
+                            <td v-if="modalVue!=Gasto.id">
+                                <button class="btn btn-info" @click="editA(Gasto)"><i class="fas fa-pencil-alt"></i></button>
                             </td>
-                            <td v-if="modalVue!=shows.id">
-                                <button class="btn btn-danger ml-2" id="delete" @click="eliminarA(shows)"><i class="fas fa-trash-alt"></i></button>
+                            <td v-if="modalVue!=Gasto.id">
+                                <button class="btn btn-danger ml-2" id="delete" @click="eliminarA(Gasto)"><i class="fas fa-trash-alt"></i></button>
                             </td>
                         </tr>
-                        <editar-component v-if="modalVue==shows.id" :eName="shows.name" :eMonto="shows.monto" :eTipo="shows.tipo" :id="shows.id" @close="editA"></editar-component>
+                        <editar-component v-if="modalVue==Gasto.id" :eName="Gasto.name" :eMonto="Gasto.monto" :eTipo="Gasto.tipo" :id="Gasto.id" @close="editA"></editar-component>
                     </tbody>
                 </table>
             </div>

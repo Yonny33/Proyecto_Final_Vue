@@ -1,5 +1,5 @@
 <template>
-    <div class="d-flex justify-content-between bd-highlight bg-primary fixed-top">
+    <div class="d-flex justify-content-between bd-highlight bg-dark fixed-top">
         <div class="p-2 bd-highlight h1-titulo">
             <p class="font-weight-light mb-0 h4">{{tutulo}}</p>
         </div>
